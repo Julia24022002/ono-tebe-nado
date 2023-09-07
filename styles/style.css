@@ -5,58 +5,62 @@ body {
   /*шапка страницы*/
 .header {  
     display: grid;  
-    grid-template-columns: 1fr 148px 1fr;  
-    place-items: center; 
+    grid-template-columns: repeat(3, 1fr);  
     color: #000;
     padding: 92px 49px 92px 51px;
+    align-items: center;
+    justify-content: center;
 }
 
-.header_menu {  /*меню навигации*/
-    display: grid;
-    flex-direction: row; 
+.header__menu {  /*меню навигации*/
+    place-content: center;
 }
 
 .header__links-list {   /*список ссылок*/
     display: flex;
     gap: 32px;
-    list-style: circle; 
-    margin: 43px 209px 45px 0;
-}
-
-.header__links-list-item_no-bullit {
+    flex-direction: row;
     list-style: none;
+    white-space: nowrap;
+    font-weight: normal;
+    list-style-position:outside;
+    text-underline-offset: 4px;
+    font-size: 18px;
 }
 
 .header__links-list-item { /* пункт списка */
-    color: #000;
-    font-family: Raleway;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-underline-offset: 4px;
+    font-family: Raleway, sans-serif;
+    text-decoration: underline;
+    list-style: circle;   
+}
+
+.header__links-list-item_no-bullit {
+    list-style-type: none;
 }
 
 .header__logo {  /*логотип*/
-    display: flex;
+    display: block;
     width: 148px;
     height: 105px;
-    flex-shrink: 0; 
-    margin: 0 auto 4px auto;
+    margin: auto;
+}
+
+.header__logo-image{
+    width: 100%; 
 }
 
 .address{
     text-underline-offset: 4px; /* линия отступает от текста*/
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-size: 18px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 24.3px; 
 }
 
 .header__address{  /*блок с контактной информацией*/
-  align-self: center;
-justify-self: end;
+   margin-left: auto;
+   padding: 5px 0 7px auto;
 }
 
 
@@ -183,8 +187,3 @@ justify-self: end;
     padding: 180px 50px 90px 50px; 
 }
 
-.header__logo {
-    display: inline-block;
-    width: 148px;
-    height: 105px;
-}
