@@ -329,8 +329,7 @@ body {
 }
 
 .about__column-text {
-  /*правая колонка*/
-  display: inline-flex; 
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
