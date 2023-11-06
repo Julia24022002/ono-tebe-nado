@@ -82,7 +82,7 @@ body {
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% auto;
+  background-size: cover;
   font-style: normal;
   padding: 165px 50px 50px 50px;
 }
@@ -208,7 +208,7 @@ body {
   /*  список карточек*/
   display: flex;
   gap: 25px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -235,30 +235,25 @@ body {
   justify-content: space-between;
   flex-direction: column;
   position: relative;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .card_type_film {
   /*про фильм */
   background-image: url(../images/card-lot-01.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
 }
 
 .card_type_book {
   /* про книги */
   background-image: url(../images/card-lot-02.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
 }
 
 .card_type_picture {
   /* про картину*/
   background-image: url(../images/card-lot-03.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
 }
 
 .card__title {
@@ -301,9 +296,9 @@ body {
 .about {
   /*вся секция*/
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   gap: 25px;
-  padding: 0 50px 200px 50px;
+  padding: 0 50px 180px 50px;
 }
 
 .about__column-img {
@@ -335,15 +330,20 @@ body {
 
 .about__column-text {
   /*правая колонка*/
-  display: grid;
+  display: inline-flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   gap: 100px;
+  flex-shrink: 0;
   margin-top: 100px;
+  max-width: 885px;
+  font-family: Raleway, sans-serif;
 }
 
 .about__title {
   /*заголовок секции*/
   color: #000;
-  font-family: Raleway, sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
